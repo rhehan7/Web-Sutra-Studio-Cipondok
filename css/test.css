@@ -1,0 +1,84 @@
+.cta-section {
+  margin-bottom: -80px;
+}
+
+.cta {
+  background: url("../assets/img/cipondok-one.jpg") no-repeat 50% 50%;
+  background-size: cover;
+  position: relative;
+  border-radius: 15px;
+}
+
+.cta:before {
+  position: absolute;
+  content: "";
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: #07212e;
+  opacity: 0.6;
+  border-radius: 15px;
+}
+
+.counter-stat {
+  text-align: center;
+  padding: 40px 0px 40px 0px;
+  position: relative;
+}
+
+.counter-stat h5 {
+  color: #fff;
+}
+
+.counter-stat i {
+  display: block;
+  color: rgba(255, 255, 255, 0.06);
+  font-size: 70px;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  -webkit-transform: translateY(25px);
+  transform: translateY(25px);
+}
+
+.counter-stat span {
+  font-size: 40px;
+  color: #fff;
+}
+
+.counter-stat p {
+  margin-bottom: 0px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+
+@media only screen and (min-width: 992px) {
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .hero-text h1 {
+    font-size: 45px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+}
+
+@media only screen and (max-width: 767px) {
+  .cta-section {
+    margin-left: 4%;
+    margin-right: 4%;
+  }
+
+  .counter-stat h5 {
+    font-size: 18px;
+    font-weight: lighter;
+  }
+
+  .counter-stat .h3 {
+    font-size: 28px;
+  }
+}
