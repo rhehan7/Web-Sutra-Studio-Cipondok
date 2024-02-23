@@ -113,7 +113,7 @@ include 'components/like_post.php';
 
 <section class="posts-container">
 
-   <h1 class="heading">latest posts</h1>
+   <h1 class="heading">Artikel Seputar Cipondok</h1>
 
    <div class="box-container">
 

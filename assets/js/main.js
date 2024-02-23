@@ -54,7 +54,7 @@
 
         // serikultur slider
         $(".serikultur-slider").owlCarousel({
-            items: 1,
+            items: 3,
             loop: true,
             autoplay: true,
             nav: true,

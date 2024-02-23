@@ -300,14 +300,14 @@ if(isset($_POST['delete_comment'])){
 								<li><a href="shop.html">Product</a></li>
 								<li><a href="contact.html">Contact</a></li>
 								<li>
-									<div class="header-icons">
-										<a class="shopping-cart" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
-										<a class="mobile-hide search-bar-icon" href="#"><i class="fas fa-search"></i></a>
-									</div>
+                           <div class="header-icons">
+                                 <a href="https://www.instagram.com/sutrastudio.cipondok?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+                                 <i class="fab fa-instagram"> Sutra Studio Cipondok</i></a>
+                           </div>
 								</li>
 							</ul>
 						</nav>
-						<a class="mobile-show search-bar-icon" href="#"><i class="fas fa-search"></i></a>
+ 
 						<div class="mobile-menu"></div>
 						<!-- menu end -->
 					</div>

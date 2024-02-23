@@ -30,6 +30,8 @@ include 'components/like_post.php';
 	<!-- google font -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+	<!-- font awesome cdn link  -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 	<!-- fontawesome -->
 	<link rel="stylesheet" href="assets/css/all.min.css">
 	<!-- bootstrap -->
@@ -192,15 +194,15 @@ include 'components/like_post.php';
 						<!-- menu start -->
 						<nav class="main-menu text-center" style="font-size: 140%;">
 							<ul>
-								<li><a href="index.html">Home</a></li>
+								<li class="current-list-item"><a href="index.html">Home</a></li>
 								<li><a href="about.html">About</a></li>
-								<li class="current-list-item"><a href="news.php">Blog</a></li>
+								<li><a href="news.php">Blog</a></li>
 								<li><a href="shop.html">Product</a></li>
 								<li><a href="contact.html">Contact</a></li>
 								<li>
 									<div class="header-icons">
-										<a href="https://www.instagram.com/sutrastudio.cipondok?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
-										<i class="fab fa-instagram"> Sutra Studio Cipondok</i></a>
+										<a class="shopping-cart" href="./shop.html"><i class="fas fa-shopping-cart"></i></a>
+										<a class="mobile-hide search-bar-icon" href="#"><i class="fas fa-search"></i></a>
 									</div>
 								</li>
 							</ul>
@@ -267,8 +269,8 @@ include 'components/like_post.php';
 	<!-- end breadcrumb section -->
 
 	<!-- latest news -->
-	<section class="posts-containerr" style="padding:2rem; margin: 0 auto; max-width: 1200px; box-sizing: border-box;" >
-			<div class="box-container">
+	<section>
+			<div>
 
 				<?php
 					$select_posts = $conn->prepare("SELECT * FROM `posts` WHERE status = ? LIMIT 6 ");
@@ -288,52 +290,36 @@ include 'components/like_post.php';
 
 						$confirm_likes = $conn->prepare("SELECT * FROM `likes` WHERE user_id = ? AND post_id = ?");
 						$confirm_likes->execute([$user_id, $post_id]);
-				?>
-				<form class="boxx" 
-						style="border: var(--border); box-shadow: var(--box-shadow); border-radius: 0.5rem; background-color: var(--white); padding: 2rem; overflow: hidden;" 
-						method="post">
-					<input type="hidden" name="post_id" value="<?= $post_id; ?>">
-					<input type="hidden" name="admin_id" value="<?= $fetch_posts['admin_id']; ?>">
-					<div class="post-admin" style="font-size: 62.5%; display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2rem;">
-						<i class="fas fa-user" style="  text-align: center; height: 4.5rem; width: 5rem; line-height: 4.2rem; font-size: 2rem; border: var(--border); border-radius: 0.5rem; background-color: var(--light-bg); color: var(--black);"></i>
-						<div style="font-size: 1.5rem; margin-top: 0.2rem; color: var(--light-color);">
-						<a href="author_posts.php?author=<?= $fetch_posts['name']; ?>" style="font-size: 2rem; color: var(--main-color);" ><?= $fetch_posts['name']; ?></a>
-						<div style="font-size: 1.5rem; margin-top: 0.2rem; color: var(--light-color);">
-						<?= $fetch_posts['date']; ?></div>
-						</div>
-					</div>
-					
-					<?php
-						if($fetch_posts['image'] != ''){  
-					?>
-					<div class="post-image-container">
-						<img src="uploaded_img/<?= $fetch_posts['image']; ?>" class="post-image" style="width: 300px; height: 300px; border-radius: 0.5rem; margin-bottom: 2rem; object-fit: cover" alt="">
-					</div>
-					<?php
-					}
-					?>
-					<div class="post-title" style="  font-size: 2rem; color: var(--black); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; margin-bottom: 1rem;" ><?= $fetch_posts['title']; ?></div>
-					<div class="post-content content-150" style="  font-size: 2rem; line-height: 1.5; padding: 0.5rem 0; color: var(--light-color); white-space: pre-line;" >
-						<?php
-						$post_content = $fetch_posts['content']; // Ambil konten dari database
-						// Batasi konten hanya hingga 100 karakter
-						$limited_content = substr($post_content, 0, 50);
-						// Cek apakah konten asli lebih panjang dari 100 karakter
-						if (strlen($post_content) > 100) {
-							$limited_content .= '...'; // Tambahkan tanda elipsis jika kontennya dipotong
-						}
-						echo $limited_content; // Tampilkan konten yang telah dibatasi
-						?>
-					</div>
-					<a href="view_post.php?post_id=<?= $post_id; ?>" class="inline-btnn" style="margin-top: 1rem; border-radius: 0.5rem; cursor: pointer; font-size: 1.8rem; color: #fff; padding: 0.8rem 1.5rem; text-transform: capitalize; text-align: center;display: inline-block; margin-right: 1rem; background-color: var(--main-color);" onmouseover="this.style.backgroundColor='var(--black)'" onmouseout="this.style.backgroundColor='var(--main-color)'">
-					read more</a>
-					<a href="category.php?category=<?= $fetch_posts['category']; ?>" class="post-cat" style="  display: block; margin-top: 2rem; font-size: 1.7rem;" style="margin-right: 0.5rem; color: var(--light-color);" > <i class="fas fa-tag" style="color: #999999;"></i> <span><?= $fetch_posts['category']; ?></span></a>
-					<div class="iconss" style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; background-color: var(--light-bg); border-radius: 0.5rem; padding: 1.5rem 2rem; border: var(--border); margin-top: 2rem;" >
-						<a href="view_post.php?post_id=<?= $post_id; ?>"><i class="fas fa-comment"></i><span style="font-size: 2rem; color: var(--main-color);" >(<?= $total_post_comments; ?>)</span></a>
-						<button type="submit" name="like_post" style="font-size: 2rem; color: var(--main-color); cursor: pointer; background: none; border: none;" ><i class="fas fa-heart" style="<?php if($confirm_likes->rowCount() > 0){ echo 'color:var(--red);'; } ?>  "></i><span>(<?= $total_post_likes; ?>)</span></button>
-					</div>
-				
-				</form>
+				?>  
+                    <form action="" method="post">
+                        <input type="hidden" name="post_id" value="<?= $post_id; ?>">
+                        <input type="hidden" name="admin_id" value="<?= $fetch_posts['admin_id']; ?>">                        
+                        <div class="col-lg-4 col-md-6">
+                            <div class="single-latest-news">
+                                <a href="single-news.html"><div class="latest-news-bg"></div></a>
+                                <div class="news-text-box">
+                                    <h3><a href="single-news.html"><?= $fetch_posts['title']; ?></a></h3>
+                                    <p class="blog-meta">
+                                        <span class="author"><i class="fas fa-user"></i><a href="author_posts.php?author=<?= $fetch_posts['name']; ?>"><?= $fetch_posts['name']; ?></a></span>
+                                        <span class="date"><i class="fas fa-calendar"></i><?= $fetch_posts['date']; ?></span>
+                                    </p>
+                                    <p class="excerpt">
+                                        <?php
+                                        $post_content = $fetch_posts['content']; // Ambil konten dari database
+                                        // Batasi konten hanya hingga 100 karakter
+                                        $limited_content = substr($post_content, 0, 150);
+                                        // Cek apakah konten asli lebih panjang dari 100 karakter
+                                        if (strlen($post_content) > 100) {
+                                            $limited_content .= '...'; // Tambahkan tanda elipsis jika kontennya dipotong
+                                        }
+                                        echo $limited_content; // Tampilkan konten yang telah dibatasi
+                                        ?>                                        
+                                    </p>
+                                    <a href="single-news.html" class="read-more-btn">read more <i class="fas fa-angle-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>	
 				<?php
 					}
 				}else{

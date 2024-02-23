@@ -794,9 +794,10 @@ nav.mean-nav > ul > li:first-child > a {
 }
 
 .header-icons a {
-  color: #fff;
+  color: #a4987c !important;
   display: inline-block;
   padding: 10px;
+  font-size: 17px !important;
 }
 
 .site-logo {
@@ -813,7 +814,7 @@ nav.main-menu ul ul.sub-menu li {
 }
 
 nav.main-menu ul ul.sub-menu li a {
-  color: #555;
+  color: #fff;
   padding: 8px;
   font-size: 13px;
   font-weight: 600;
@@ -821,12 +822,12 @@ nav.main-menu ul ul.sub-menu li a {
 
 nav.main-menu ul li.current-list-item > a {
   /* color: #a4987c; */
-  color: white;
+  color:  #a4987c; 
 }
 
-nav.main-menu ul li.current-list-item:hover > a {
+/* nav.main-menu ul li.current-list-item:hover > a {
   color: #a4987c;
-}
+} */
 
 nav.main-menu li:hover > a {
   color: #a4987c;
@@ -845,7 +846,7 @@ nav.main-menu li a {
 }
 
 .top-header-area .header-icons a:hover {
-  color: #a4987c;
+  color: #fff !important;
 }
 
 .sticky-wrapper {
@@ -1777,7 +1778,7 @@ div.owl-controls,
   line-height: 22px;
   font-size: 18px;
   margin-bottom: 4px;
-  color: darkgray;
+  color: #a4987c;
 }
 
 .list-box .content p {
@@ -2423,7 +2424,7 @@ a.video-play-btn {
 }
 
 .abt-bg {
-  background-image: url(../img/abt.JPG);
+  background-image: url(../img/cipondok-three.jpg);
   height: 100%;
   width: 100%;
   background-size: cover;

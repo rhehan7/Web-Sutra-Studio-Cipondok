@@ -22,19 +22,81 @@ include 'components/like_post.php';
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>posts</title>
 
-   <!-- font awesome cdn link  -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+	<!-- favicon -->
+	<link rel="shortcut icon" type="image/png" href="assets/img/company-logos/logo.png">
+	<!-- google font -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+	<!-- font awesome cdn link  -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+	<!-- fontawesome -->
+	<link rel="stylesheet" href="assets/css/all.min.css">
+	<!-- main style -->
+	<link rel="stylesheet" href="assets/css/main.css">   
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+	<!-- owl carousel -->
+	<link rel="stylesheet" href="assets/css/owl.carousel.css">
+	<!-- magnific popup -->
+	<link rel="stylesheet" href="assets/css/magnific-popup.css">
+	<!-- animate css -->
+	<link rel="stylesheet" href="assets/css/animate.css">
+	<!-- mean menu css -->
+	<link rel="stylesheet" href="assets/css/meanmenu.min.css">
+	<!-- responsive -->
+	<link rel="stylesheet" href="assets/css/responsive.css">
 
    <link rel="stylesheet" href="css/style.css">
+
+   <style>
+      
+   </style>
 
 </head>
 <body>
    
-<?php include 'components/user_header.php'; ?>
+	<!-- header -->
+	<div class="top-header-area" id="sticker">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-sm-12">
+					<div class="main-menu-wrap">
+						<!-- logo -->
+						<div class="site-logo">
+							<a href="index.html">
+								<img src="assets/img/company-logos/logo.png" width="30%" alt="">
+							</a>
+						</div>
+						<!-- logo -->
+
+						<!-- menu start -->
+						<nav class="main-menu text-center" style="font-size: 140%;">
+							<ul>
+								<li class="current-list-item"><a href="index.html">Home</a></li>
+								<li><a href="about.html">About</a></li>
+								<li><a href="news.php">Blog</a></li>
+								<li><a href="shop.html">Product</a></li>
+								<li><a href="contact.html">Contact</a></li>
+								<li>
+									<div class="header-icons">
+										<a class="shopping-cart" href="./shop.html"><i class="fas fa-shopping-cart"></i></a>
+										<a class="mobile-hide search-bar-icon" href="#"><i class="fas fa-search"></i></a>
+									</div>
+								</li>
+							</ul>
+						</nav>
+ 
+						<div class="mobile-menu"></div>
+						<!-- menu end -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 <section class="posts-container">
 
-   <h1 class="heading">latest posts</h1>
+   <h1 class="heading">Artikel Seputar Cipondok</h1>
 
    <div class="box-container">
 
@@ -96,26 +158,123 @@ include 'components/like_post.php';
 </section>
 
 
+	<!-- logo carousel -->
+	<div class="logo-carousel-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="logo-carousel-inner">
+						<div class="single-logo-item">
+							<img src="assets/img/company-logos/1.png" alt="">
+						</div>
+						<div class="single-logo-item">
+							<img src="assets/img/company-logos/2.png" alt="">
+						</div>
+						<div class="single-logo-item">
+							<img src="assets/img/company-logos/3.png" alt="">
+						</div>
+						<div class="single-logo-item">
+							<img src="assets/img/company-logos/4.png" alt="">
+						</div>
+						<div class="single-logo-item">
+							<img src="assets/img/company-logos/5.png" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end logo carousel -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<?php include 'components/footer.php'; ?>
-
-<script src="js/script.js"></script>
+	<!-- footer -->
+	<div class="footer-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-box about-widget">
+						<h2 class="widget-title" style="padding-top: 5%;">Tentang Kami</h2>
+						<p class="widget-title">Sebuah website yang didirikan oleh organisasi Mahasiswa UPI Tasikmalaya dalam rangka membantu transformasi ekonomi masyarakat Desa Cipondok</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-box get-in-touch">
+						<h2 class="widget-title" style="padding-top: 5%;">Alamat</h2>
+						<ul class="widget-title">
+							<li>Jl. Karanganyar 2, Ds. Cipondok, Kec. Sukaresik, Tasikmalaya, Jawa Barat<br>46159</li>
+							<li>sutrastudiocipondok@gmail.com</li>
+							<li>0895-190-7523</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-box pages">
+						<h2 class="widget-title" style="padding-top: 5%;">Halaman</h2>
+						<ul class="widget-title">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="news.php">Blog</a></li>
+							<li><a href="shop.html">Product</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-box subscribe">
+						<h2 class="widget-title" style="padding-top: 5%;">Ikuti Kami</h2>
+						<p></p>
+						<form action="index.html" class="widget-title"><p class="widget-title">Mari ikuti kami untuk menjadi yang pertama menerima informasi terbaru seputar Sutra Studio Cipondok</p>
+							<input class="widget-title" type="email" placeholder="Masukan Email">
+							<button type="submit"><i class="fas fa-paper-plane"></i></button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end footer -->
+	
+	<!-- copyright -->
+	<div class="copyright">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-12">
+					<p>Copyrights &copy; 2024 - Sutra Studio Cipondok</a>,  All Rights Reserved.</p>
+				</div>
+				<div class="col-lg-6 text-right col-md-12">
+					<div class="social-icons">
+						<ul>
+							<li><a href="https://www.youtube.com/watch?v=l3mM6C6HcSo" target="_blank">
+								<i class="fab fa-youtube"></i></a></li>
+							<li><a href="https://www.instagram.com/sutrastudio.cipondok?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+								<i class="fab fa-instagram"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end copyright -->
+	
+	<!-- jquery -->
+	<script src="assets/js/jquery-1.11.3.min.js"></script>
+	<!-- bootstrap -->
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<!-- count down -->
+	<script src="assets/js/jquery.countdown.js"></script>
+	<!-- isotope -->
+	<script src="assets/js/jquery.isotope-3.0.6.min.js"></script>
+	<!-- waypoints -->
+	<script src="assets/js/waypoints.js"></script>
+	<!-- owl carousel -->
+	<script src="assets/js/owl.carousel.min.js"></script>
+	<!-- magnific popup -->
+	<script src="assets/js/jquery.magnific-popup.min.js"></script>
+	<!-- mean menu -->
+	<script src="assets/js/jquery.meanmenu.min.js"></script>
+	<!-- sticker js -->
+	<script src="assets/js/sticker.js"></script>
+	<!-- main js -->
+	<script src="assets/js/main.js"></script>
 
 </body>
 </html>
